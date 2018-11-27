@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>{{ title }} - Microblog</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
 	{% if user.username == "Knine3" %}
 	<h1>Oh, it's you, Knine Sama</h1>
 	<h2>How may I serve you, My Lord?</h2>
 	{% else %}
 	<h1>Hello, {{ user.username }}!</h1>
 	{% endif %}
-	<p><a href="http://localhost:5000/posts">View Posts</a></p>
-</body>
-</html>
+{% endblock%}
